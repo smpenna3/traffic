@@ -1,0 +1,35 @@
+
+<html>
+	<body>
+
+	<style>
+	input{
+		width: 19%;
+		padding: 4%;
+		height: 50px;
+	}
+	</style>
+
+	<h1>Color Control</h1>
+	<form method='post'>
+		<input type='submit' value='All On' name='on'>
+		<input type='submit' value='All Off' name='off'>
+		<input type='submit' value='Red Toggle' name='red'>
+		<input type='submit' value='Yellow Toggle' name='yellow'>
+		<input type='submit' value='Green Toggle' name='green'>
+
+	</form>
+
+	<h1>Status</h1>
+	<svg xmlns="http://www.w3.org/2000/svg">
+   	 	<circle cx="50" cy="50" r="50" fill="{{red_status}}" />
+	</svg>
+	<svg xmlns="http://www.w3.org/2000/svg">
+   		<circle cx="50" cy="50" r="50" fill="{{yellow_status}}" />
+	</svg>
+	<svg xmlns="http://www.w3.org/2000/svg">
+   	 	<circle cx="50" cy="50" r="50" fill="{{green_status}}" />
+	</svg>	
+	
+	</body>
+</html>

@@ -1,0 +1,207 @@
+2018-07-12 21:59:23,666 - INFO -  Scheduler set up
+2018-07-12 21:59:23,667 - INFO -  Pins initialized
+2018-07-12 21:59:23,897 - INFO -  Job added
+2018-07-13 06:30:00,006 - INFO -  All on, good morning!
+2018-07-14 06:30:00,016 - INFO -  All on, good morning!
+2018-07-14 08:50:01,636 - INFO -  Scheduler set up
+2018-07-14 08:50:01,640 - INFO -  Pins initialized
+2018-07-14 08:50:01,887 - INFO -  Job added
+2018-07-16 06:30:00,017 - INFO -  All on, good morning!
+2018-07-16 06:44:00,146 - INFO -  Scheduler set up
+2018-07-16 06:44:00,150 - INFO -  Pins initialized
+2018-07-16 06:44:00,397 - INFO -  Job added
+2018-07-17 06:30:00,006 - INFO -  All on, good morning!
+2018-07-17 06:17:13,436 - INFO -  Scheduler set up
+2018-07-17 06:17:13,440 - INFO -  Pins initialized
+2018-07-17 06:17:13,681 - INFO -  Job added
+2018-07-18 06:30:00,023 - INFO -  All on, good morning!
+2018-07-18 06:17:21,525 - INFO -  Scheduler set up
+2018-07-18 06:17:21,529 - INFO -  Pins initialized
+2018-07-18 06:17:21,792 - INFO -  Job added
+2018-07-19 06:58:20,534 - INFO -  Scheduler set up
+2018-07-19 06:58:20,536 - INFO -  Pins initialized
+2018-07-19 06:58:20,789 - INFO -  Job added
+2018-07-20 06:30:00,006 - INFO -  All on, good morning!
+2018-07-20 06:34:36,236 - INFO -  Scheduler set up
+2018-07-20 06:34:36,239 - INFO -  Pins initialized
+2018-07-20 06:34:36,486 - INFO -  Job added
+2018-07-22 21:58:28,283 - INFO -  Scheduler set up
+2018-07-22 21:58:28,286 - INFO -  Pins initialized
+2018-07-22 21:58:28,561 - INFO -  Job added
+2018-07-27 20:58:29,119 - 42 - INFO - Scheduler setup
+2018-07-27 20:58:29,120 - 55 - ERROR - None
+2018-07-27 20:58:53,202 - 42 - INFO - Scheduler setup
+2018-07-27 20:58:53,203 - 55 - ERROR - None
+2018-07-27 20:59:44,711 - 42 - INFO - Scheduler setup
+2018-07-27 20:59:44,713 - 55 - ERROR - None
+2018-07-27 20:59:58,142 - 64 - INFO - Turned on
+2018-07-27 20:59:59,333 - 64 - INFO - Turned on
+2018-07-27 21:00:01,758 - 64 - INFO - Turned on
+2018-07-27 21:02:42,755 - 42 - INFO - Scheduler setup
+2018-07-27 21:02:42,756 - 55 - ERROR - None
+2018-07-27 21:03:09,011 - 42 - INFO - Scheduler setup
+2018-07-27 21:03:09,013 - 55 - ERROR - None
+2018-07-27 21:03:11,677 - 71 - INFO - Turned all on
+2018-07-27 21:04:39,117 - 42 - INFO - Scheduler setup
+2018-07-27 21:04:39,118 - 55 - ERROR - None
+2018-07-27 21:05:11,312 - 42 - INFO - Scheduler setup
+2018-07-27 21:05:11,313 - 55 - ERROR - None
+2018-07-27 21:05:15,942 - 71 - INFO - Turned all on
+2018-07-27 21:05:16,854 - 64 - INFO - Turned all off
+2018-07-27 21:05:17,521 - 71 - INFO - Turned all on
+2018-07-27 21:05:18,642 - 64 - INFO - Turned all off
+2018-07-27 21:05:19,211 - 71 - INFO - Turned all on
+2018-07-27 21:05:20,240 - 64 - INFO - Turned all off
+2018-07-27 21:05:25,120 - 71 - INFO - Turned all on
+2018-07-27 21:06:50,371 - 42 - INFO - Scheduler setup
+2018-07-27 21:06:50,372 - 55 - ERROR - None
+2018-07-27 21:07:53,079 - 42 - INFO - Scheduler setup
+2018-07-27 21:07:53,080 - 55 - ERROR - None
+2018-07-27 21:13:44,666 - 42 - INFO - Scheduler setup
+2018-07-27 21:13:44,667 - 55 - ERROR - None
+2018-07-27 21:13:44,898 - 78 - INFO - Added jobs to wake up and turn off
+2018-07-27 21:14:13,768 - 71 - INFO - Turned all on
+2018-07-27 21:14:15,428 - 64 - INFO - Turned all off
+2018-07-27 21:14:16,389 - 71 - INFO - Turned all on
+2018-07-27 21:14:18,528 - 64 - INFO - Turned all off
+2018-07-27 21:14:22,880 - 71 - INFO - Turned all on
+2018-07-27 22:15:40,835 - 64 - INFO - Turned all off
+2018-07-27 22:15:57,129 - 71 - INFO - Turned all on
+2018-07-27 22:15:58,204 - 64 - INFO - Turned all off
+2018-07-27 22:16:00,061 - 71 - INFO - Turned all on
+2018-07-27 22:16:01,251 - 64 - INFO - Turned all off
+2018-07-28 08:06:29,624 - 71 - INFO - Turned all on
+2018-07-28 08:06:55,072 - 64 - INFO - Turned all off
+2018-07-28 08:21:29,829 - 71 - INFO - Turned all on
+2018-07-28 09:02:55,738 - 64 - INFO - Turned all off
+2018-07-29 20:38:41,415 - 71 - INFO - Turned all on
+2018-07-29 21:09:13,951 - 42 - INFO - Scheduler setup
+2018-07-29 21:09:13,952 - 55 - ERROR - None
+2018-07-29 21:09:14,183 - 78 - INFO - Added jobs to wake up and turn off
+2018-07-29 21:09:22,415 - 71 - INFO - Turned all on
+2018-07-29 21:10:43,597 - 71 - INFO - Turned all on
+2018-07-29 21:10:46,688 - 64 - INFO - Turned all off
+2018-07-29 21:10:51,016 - 71 - INFO - Turned all on
+2018-07-29 21:10:56,824 - 64 - INFO - Turned all off
+2018-07-29 21:11:01,464 - 71 - INFO - Turned all on
+2018-07-29 21:50:21,212 - 71 - INFO - Turned all on
+2018-07-29 21:51:22,364 - 71 - INFO - Turned all on
+2018-07-29 21:54:53,121 - 71 - INFO - Turned all on
+2018-07-29 22:03:02,103 - 71 - INFO - Turned all on
+2018-07-29 22:03:52,030 - 71 - INFO - Turned all on
+2018-07-29 22:27:44,489 - 64 - INFO - Turned all off
+2018-07-30 06:40:00,006 - 71 - INFO - Turned all on
+2018-07-30 06:40:52,249 - 64 - INFO - Turned all off
+2018-07-30 06:43:00,015 - 64 - INFO - Turned all off
+2018-07-30 06:54:46,064 - 71 - INFO - Turned all on
+2018-07-30 07:05:37,980 - 71 - INFO - Turned all on
+2018-07-30 07:05:39,223 - 64 - INFO - Turned all off
+2018-07-30 21:48:51,581 - 64 - INFO - Turned all off
+2018-07-30 21:48:52,218 - 71 - INFO - Turned all on
+2018-07-30 21:48:57,748 - 64 - INFO - Turned all off
+2018-07-30 21:49:03,768 - 71 - INFO - Turned all on
+2018-07-30 21:56:32,458 - 42 - INFO - Scheduler setup
+2018-07-30 21:56:32,459 - 55 - ERROR - None
+2018-07-30 21:56:32,689 - 78 - INFO - Added jobs to wake up and turn off
+2018-07-30 21:56:39,872 - 71 - INFO - Turned all on
+2018-07-30 22:02:36,700 - 142 - INFO - Text received
+2018-07-30 22:02:47,860 - 71 - INFO - Turned all on
+2018-07-30 22:03:12,926 - 142 - INFO - Text received
+2018-07-30 22:04:19,680 - 43 - INFO - Scheduler setup
+2018-07-30 22:04:19,681 - 56 - ERROR - None
+2018-07-30 22:04:19,911 - 79 - INFO - Added jobs to wake up and turn off
+2018-07-30 22:04:26,252 - 72 - INFO - Turned all on
+2018-07-30 22:04:30,883 - 143 - INFO - Text received
+2018-07-30 22:05:55,587 - 43 - INFO - Scheduler setup
+2018-07-30 22:05:55,589 - 56 - ERROR - None
+2018-07-30 22:05:55,819 - 79 - INFO - Added jobs to wake up and turn off
+2018-07-30 22:05:58,539 - 72 - INFO - Turned all on
+2018-07-30 22:06:05,052 - 143 - INFO - Text received
+2018-07-30 22:06:05,053 - 145 - DEBUG - Previous state: 0
+2018-07-30 22:06:33,423 - 43 - INFO - Scheduler setup
+2018-07-30 22:06:33,424 - 56 - ERROR - None
+2018-07-30 22:06:33,657 - 79 - INFO - Added jobs to wake up and turn off
+2018-07-30 22:06:34,157 - 72 - INFO - Turned all on
+2018-07-30 22:06:37,430 - 143 - INFO - Text received
+2018-07-30 22:06:37,432 - 145 - DEBUG - Previous state: 0
+2018-07-30 22:06:42,195 - 65 - INFO - Turned all off
+2018-07-30 22:06:47,158 - 143 - INFO - Text received
+2018-07-30 22:06:47,160 - 145 - DEBUG - Previous state: 1
+2018-07-30 22:07:26,701 - 43 - INFO - Scheduler setup
+2018-07-30 22:07:26,702 - 56 - ERROR - None
+2018-07-30 22:07:26,932 - 79 - INFO - Added jobs to wake up and turn off
+2018-07-30 22:07:40,292 - 143 - INFO - Text received
+2018-07-30 22:07:40,293 - 145 - DEBUG - Previous state: 0
+2018-07-30 22:08:17,973 - 143 - INFO - Text received
+2018-07-30 22:08:17,974 - 145 - DEBUG - Previous state: 1
+2018-07-30 22:08:22,988 - 143 - INFO - Text received
+2018-07-30 22:08:22,989 - 145 - DEBUG - Previous state: 1
+2018-07-30 22:08:59,644 - 65 - INFO - Turned all off
+2018-07-30 22:14:02,101 - 143 - INFO - Text received
+2018-07-30 22:14:02,102 - 145 - DEBUG - Previous state: 1
+2018-07-30 22:14:07,116 - 143 - INFO - Text received
+2018-07-30 22:14:07,117 - 145 - DEBUG - Previous state: 1
+2018-07-30 22:14:12,131 - 143 - INFO - Text received
+2018-07-30 22:14:12,132 - 145 - DEBUG - Previous state: 1
+2018-07-30 22:16:28,982 - 72 - INFO - Turned all on
+2018-07-30 22:32:04,594 - 143 - INFO - Text received
+2018-07-30 22:32:04,595 - 145 - DEBUG - Previous state: 1
+2018-07-30 22:32:09,609 - 143 - INFO - Text received
+2018-07-30 22:32:09,611 - 145 - DEBUG - Previous state: 1
+2018-07-30 22:32:14,624 - 143 - INFO - Text received
+2018-07-30 22:32:14,626 - 145 - DEBUG - Previous state: 1
+2018-07-30 22:42:53,380 - 65 - INFO - Turned all off
+2018-07-31 06:40:00,006 - 72 - INFO - Turned all on
+2018-07-31 06:41:03,250 - 65 - INFO - Turned all off
+2018-07-31 06:43:00,016 - 65 - INFO - Turned all off
+2018-07-31 20:28:02,179 - 72 - INFO - Turned all on
+2018-07-31 21:17:13,954 - 43 - INFO - Scheduler setup
+2018-07-31 21:17:13,958 - 56 - ERROR - None
+2018-07-31 21:17:14,211 - 79 - INFO - Added jobs to wake up and turn off
+2018-08-01 06:40:00,006 - 72 - INFO - Turned all on
+2018-08-01 06:40:23,152 - 65 - INFO - Turned all off
+2018-08-01 06:43:00,015 - 65 - INFO - Turned all off
+2018-08-01 20:53:23,573 - 65 - INFO - Turned all off
+2018-08-01 20:53:24,328 - 72 - INFO - Turned all on
+2018-08-01 21:06:56,996 - 72 - INFO - Turned all on
+2018-08-01 21:32:13,871 - 72 - INFO - Turned all on
+2018-08-01 22:24:51,446 - 72 - INFO - Turned all on
+2018-08-01 22:24:52,532 - 65 - INFO - Turned all off
+2018-08-02 06:40:00,016 - 72 - INFO - Turned all on
+2018-08-02 06:40:48,177 - 65 - INFO - Turned all off
+2018-08-02 06:40:53,477 - 72 - INFO - Turned all on
+2018-08-02 06:41:37,860 - 65 - INFO - Turned all off
+2018-08-02 06:43:00,017 - 65 - INFO - Turned all off
+2018-08-02 06:56:24,936 - 72 - INFO - Turned all on
+2018-08-02 07:09:23,415 - 72 - INFO - Turned all on
+2018-08-02 07:09:24,677 - 72 - INFO - Turned all on
+2018-08-02 07:09:25,580 - 65 - INFO - Turned all off
+2018-08-02 20:57:28,672 - 72 - INFO - Turned all on
+2018-08-02 22:49:47,950 - 72 - INFO - Turned all on
+2018-08-02 22:49:49,480 - 65 - INFO - Turned all off
+2018-08-03 06:40:00,017 - 72 - INFO - Turned all on
+2018-08-03 06:43:00,019 - 65 - INFO - Turned all off
+2018-08-03 19:19:37,078 - 72 - INFO - Turned all on
+2018-08-03 19:24:00,534 - 72 - INFO - Turned all on
+2018-08-03 19:24:02,758 - 65 - INFO - Turned all off
+2018-08-03 22:52:11,526 - 65 - INFO - Turned all off
+2018-08-03 22:52:12,430 - 72 - INFO - Turned all on
+2018-08-03 22:53:20,627 - 72 - INFO - Turned all on
+2018-08-03 22:53:21,809 - 65 - INFO - Turned all off
+2018-08-03 22:53:24,840 - 65 - INFO - Turned all off
+2018-08-03 22:53:32,799 - 65 - INFO - Turned all off
+2018-08-04 10:19:09,893 - 72 - INFO - Turned all on
+2018-08-04 10:19:10,897 - 65 - INFO - Turned all off
+2018-08-04 10:19:18,686 - 72 - INFO - Turned all on
+2018-08-04 10:19:18,699 - 72 - INFO - Turned all on
+2018-08-04 10:19:24,461 - 65 - INFO - Turned all off
+2018-08-04 10:19:24,475 - 72 - INFO - Turned all on
+2018-08-04 10:19:24,488 - 65 - INFO - Turned all off
+2018-08-04 10:23:06,307 - 43 - INFO - Scheduler setup
+2018-08-04 10:23:06,308 - 56 - ERROR - None
+2018-08-04 10:23:06,538 - 79 - INFO - Added jobs to wake up and turn off
+2018-08-04 10:23:20,353 - 72 - INFO - Turned all on
+2018-08-04 10:23:21,151 - 65 - INFO - Turned all off
+2018-08-04 10:23:22,218 - 72 - INFO - Turned all on
+2018-08-04 10:23:22,686 - 65 - INFO - Turned all off
+2018-08-04 10:23:45,523 - 72 - INFO - Turned all on
