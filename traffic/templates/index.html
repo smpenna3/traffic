@@ -8,22 +8,13 @@
 	<form method='post'>
 		<input type='submit' value='All On' name='on'>
 		<input type='submit' value='All Off' name='off'>
-		<input type='submit' value='Red Toggle' name='red'>
-		<input type='submit' value='Yellow Toggle' name='yellow'>
-		<input type='submit' value='Green Toggle' name='green'>
-
-	</form>
-
-	<h1>Status</h1>
-	<svg xmlns="http://www.w3.org/2000/svg">
-   	 	<circle cx="50" cy="50" r="50" fill="{{red_status}}" />
-	</svg>
-	<svg xmlns="http://www.w3.org/2000/svg">
-   		<circle cx="50" cy="50" r="50" fill="{{yellow_status}}" />
-	</svg>
-	<svg xmlns="http://www.w3.org/2000/svg">
-   	 	<circle cx="50" cy="50" r="50" fill="{{green_status}}" />
-	</svg>	
 	
+		<br><br>
+		<button class="round" style="background:{{ red_status }}" value="Red Toggle" name="red">Red</button>
+		<br><br>
+		<button class="round" style="background:{{ yellow_status }}" value="Yellow Toggle" name="yellow">Yellow</button>
+		<br><br>
+		<button class="round" style="background:{{ green_status }}" value="Green Toggle" name="green">Green</button>
+	</form>	
 	</body>
 </html>

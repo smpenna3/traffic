@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request, Response
-import time
+import time, random
+
 try:
 	import RPi.GPIO as gpio
+	gpioFlag = True
 except:
 	print("RPI GPIO not found")
+	gpioFlag = False
 
 from apscheduler.schedulers.background import BackgroundScheduler
 import logging
@@ -36,6 +39,11 @@ sh.setFormatter(formatter)
 logger.addHandler(fh)
 logger.addHandler(sh)
 
+# Get flask logger
+flaskLogger = logging.getLogger('werkzeug')
+flaskLogger.setLevel(logging.WARNING)
+flaskLogger.addHandler(fh)
+flaskLogger.addHandler(sh)
 
 # Setup scheduler
 s = BackgroundScheduler(misfire_grace_time=60, max_instances=1, timezone='America/New_York')
@@ -46,15 +54,16 @@ relays = [16, 17, 18]
 
 
 # Setup GPIO lines
-try:
-	gpio.setmode(gpio.BCM)
-	gpio.setwarnings(False)
-	for i in relays:
-		gpio.setup(i, gpio.OUT)
-		gpio.output(i, 1)  # Start with all off
-except:
-	logger.error('Could not setup GPIO')
-logger.error(traceback.print_exc())
+if(gpioFlag):
+	try:
+		gpio.setmode(gpio.BCM)
+		gpio.setwarnings(False)
+		for i in relays:
+			gpio.setup(i, gpio.OUT)
+			gpio.output(i, 1)  # Start with all off
+	except:
+		logger.error('Could not setup GPIO')
+		logger.error(traceback.print_exc())
 
 
 # Set up the flask app
@@ -70,86 +79,103 @@ class trafficLights():
 		
 	# Turn all off
 	def turnOff(self):
-		try:
-			gpio.output(self.red, 1)
-			gpio.output(self.green, 1)
-			gpio.output(self.yellow, 1)
-			logger.info("Turned all off")
-			
-		except Exception as e:
-			logger.error(str(e))
+		if(gpioFlag):
+			try:
+				gpio.output(self.red, 1)
+				gpio.output(self.green, 1)
+				gpio.output(self.yellow, 1)
+				logger.info("Turned all off")
+				
+			except Exception as e:
+				logger.error(str(e))
+		else:
+			logger.info('All off')
 		
 
 	# Define function to turn on all lights
 	def turnOn(self):
-		try:
-			gpio.output(self.red, 0)
-			gpio.output(self.green, 0)
-			gpio.output(self.yellow, 0)
-			logger.info("Turned all on")
+		if(gpioFlag):
+			try:
+				gpio.output(self.red, 0)
+				gpio.output(self.green, 0)
+				gpio.output(self.yellow, 0)
+				logger.info("Turned all on")
 
-		except Exception as e:
-			logger.error(str(e))
+			except Exception as e:
+				logger.error(str(e))
+		else:
+			logger.info('All on')
 			
 	# Set colors
 	def set(self, color, set='toggle'):
-		try:
-			if(color == 'red'):
-				if(set == 'toggle'):
-					gpio.output(self.red, not gpio.input(self.red))
-				elif(set == 'on' or str(set) == '0'):
-					gpio.output(self.red, 0)
-				elif(set == 'off' or str(set) == '1'):
-					gpio.output(self.red, 1)
-			
-			if(color == 'green'):
-				if(set == 'toggle'):
-					gpio.output(self.green, not gpio.input(self.green))
-				elif(set == 'on' or str(set) == '0'):
-					gpio.output(self.green, 0)
-				elif(set == 'off' or str(set) == '1'):
-					gpio.output(self.green, 1)
-			
-			if(color == 'yellow'):
-				if(set == 'toggle'):
-					gpio.output(self.yellow, not gpio.input(self.yellow))
-				elif(set == 'on' or str(set) == '0'):
-					gpio.output(self.yellow, 0)
-				elif(set == 'off' or str(set) == '1'):
-					gpio.output(self.yellow, 1)
-		except Exception as e:
-			logger.error(str(e))
+		if(gpioFlag):
+			try:
+				if(color == 'red'):
+					if(set == 'toggle'):
+						gpio.output(self.red, not gpio.input(self.red))
+					elif(set == 'on' or str(set) == '0'):
+						gpio.output(self.red, 0)
+					elif(set == 'off' or str(set) == '1'):
+						gpio.output(self.red, 1)
+				
+				if(color == 'green'):
+					if(set == 'toggle'):
+						gpio.output(self.green, not gpio.input(self.green))
+					elif(set == 'on' or str(set) == '0'):
+						gpio.output(self.green, 0)
+					elif(set == 'off' or str(set) == '1'):
+						gpio.output(self.green, 1)
+				
+				if(color == 'yellow'):
+					if(set == 'toggle'):
+						gpio.output(self.yellow, not gpio.input(self.yellow))
+					elif(set == 'on' or str(set) == '0'):
+						gpio.output(self.yellow, 0)
+					elif(set == 'off' or str(set) == '1'):
+						gpio.output(self.yellow, 1)
+			except Exception as e:
+				logger.error(str(e))
+		else:
+			logger.info('Set ' + str(color) + ' to ' + str(set))
 		
 	# Return the status of the lights
 	def getStatus(self, light='all'):
-		try:
-			if(gpio.input(red)):
-				redStatus = 'black'
-			else:
-				redStatus = 'red'			
+		if(gpioFlag):
+			try:
+				if(gpio.input(red)):
+					redStatus = 'black'
+				else:
+					redStatus = 'red'			
 
-			if(gpio.input(green)):
-				greenStatus = 'black'
-			else:
-				greenStatus = 'green'
+				if(gpio.input(green)):
+					greenStatus = 'black'
+				else:
+					greenStatus = 'green'
 
-			if(gpio.input(yellow)):
-				yellowStatus = 'black'
-			else:
-				yellowStatus = '#ff9900'
-				
-			if(light == 'all'):
-				return redStatus, yellowStatus, greenStatus
-			elif(light == 'red'):
-				return redStatus
-			elif(light == 'yellow'):
-				return yellowStatus
-			elif(light == 'green'):
-				return greenStatus
-				
-		except Exception as e:
-			logger.error(str(e))
-			return 'black', 'black', 'black'
+				if(gpio.input(yellow)):
+					yellowStatus = 'black'
+				else:
+					yellowStatus = '#ff9900'
+					
+				if(light == 'all'):
+					return redStatus, yellowStatus, greenStatus
+				elif(light == 'red'):
+					return redStatus
+				elif(light == 'yellow'):
+					return yellowStatus
+				elif(light == 'green'):
+					return greenStatus
+					
+			except Exception as e:
+				logger.error(str(e))
+				return 'black', 'black', 'black'
+		else:
+			x = random.randint(0, 4)
+			if(x == 0): return 'black', 'black', 'black'
+			elif(x == 1): return 'red', 'black', 'green'
+			elif(x == 2): return 'red', 'black', 'black'
+			elif(x == 3): return 'black', 'yellow', 'black'
+			elif(x == 4): return 'black', 'black', 'green'
 			
 	def getState(self, light):
 		if(light == 'red'):

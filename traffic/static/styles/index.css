@@ -3,3 +3,18 @@ input{
 	padding: 4%;
 	height: 50px;
 }
+
+.round{
+	font-weight: bold;
+	font-size: 3vw;
+	color: white;
+	width: 20vh;
+	height: 20vh;
+	border-radius:50%;
+	border: none;
+	outline: none;
+}
+
+br{
+	line-height: 150%;
+}
