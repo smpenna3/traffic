@@ -35,7 +35,7 @@ lights = TrafficLights()
 ############# SETUP FLASK ROUTES ######################
 @app.route('/red/<state>')
 def red(state):
-	print('red: ' + str(state))
+	lights.set_red(state)
 	return Response(status=200)
 
 @app.route('/red')
@@ -44,7 +44,7 @@ def red_get():
 
 @app.route('/green/<state>')
 def green(state):
-	print('green: ' + str(state))
+	lights.set_green(state)
 	return Response(status=200)
 
 @app.route('/green')
@@ -53,7 +53,7 @@ def green_get():
 
 @app.route('/yellow/<state>')
 def yellow(state):
-	print('yellow: ' + str(state))
+	lights.set_yellow(state)
 	return Response(status=200)
 
 @app.route('/yellow')
