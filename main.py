@@ -1,6 +1,4 @@
 from flask import Flask, render_template, request, Response
-import time, random
-from apscheduler.schedulers.background import BackgroundScheduler
 import logging
 import traceback
 import datetime as dt
@@ -27,35 +25,11 @@ flaskLogger.setLevel(logging.WARNING)
 flaskLogger.addHandler(fh)
 flaskLogger.addHandler(sh)
 
-# Setup scheduler
-s = BackgroundScheduler(misfire_grace_time=60, max_instances=1, timezone='America/New_York')
-s.start()
-logger.info('Scheduler setup')
-
-
 # Set up the flask app
 app = Flask(__name__)		
 	
 # Set up instance of class
 lights = TrafficLights()
-	
-########## SETUP TIMER ##################
-
-wakeupHour = 6
-wakeupMinute = 27 
-
-if(wakeupMinute + 2 >= 60):
-	stopHour = wakeupHour + 1
-	stopMinute = wakeupMinute - 58
-else:
-	stopHour = wakeupHour
-	stopMinute = wakeupMinute + 2
-
-s.add_job(lights.all_on, 'cron', day_of_week='mon-fri', hour=wakeupHour, minute=wakeupMinute, id='wakeUp')
-s.add_job(lights.off, 'cron', day_of_week='mon-fri', hour=stopHour, minute=stopMinute, id='turnOff')
-logger.info('Added jobs to wake up and turn off')
-
-#########################################
 
 
 ############# SETUP FLASK ######################
@@ -102,45 +76,6 @@ def off():
 		return Response(status=200)
 	else:
 		return Response(status=600)
-		
-# Define a method for configuration  options
-@app.route('/config', methods=['GET', 'POST'])
-def configuration():
-	global wakeupHour, wakeupMinute
-	if request.method == 'POST':
-		logger.info('New wakeup time ' + str(request.form['wakeup']))
-		try:
-			hour = int(str(request.form['wakeup']).split(":")[0])
-			minute = int(str(request.form['wakeup']).split(":")[1])
-			
-			if(minute + 2 >= 60):
-				stopHour = hour + 1
-				stopMinute = minute - 58
-			else:
-				stopHour = hour
-				stopMinute = minute + 2
-		
-			if(hour < 24 and minute < 60 and hour >= 0 and minute >= 0):
-				s.remove_job('wakeUp')
-				s.remove_job('turnOff')
-				
-				s.add_job(lights.all_on, 'cron', day_of_week='mon-fri', hour=hour, minute=minute, id='wakeUp')
-				s.add_job(lights.off, 'cron', day_of_week='mon-fri', hour=stopHour, minute=stopMinute, id='turnOff')
-				
-				wakeupHour = hour
-				wakeupMinute = minute 
-			else:
-				logger.error('Invalid wakeup time')
-		
-		except Exception as e:
-			logger.error("Couldn't set new wakeup time. " + str(e))
-			
-		wakeupString = str(wakeupHour) + ":" + str(wakeupMinute)
-		return render_template('config.html', wakeupTime = wakeupString)
-	
-	else:
-		wakeupString = str(wakeupHour) + ":" + str(wakeupMinute)
-		return render_template('config.html', wakeupTime = wakeupString)
 
 
 if __name__ == '__main__':
