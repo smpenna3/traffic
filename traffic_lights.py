@@ -38,22 +38,22 @@ class TrafficLights():
         if(state == 'toggle'):
             gpio.output(self.red, not gpio.input(self.red))
         elif(state == 1 or state == 'on'):
-            gpio.output(self.red, 1)
-        elif(state == 0 or state == 'off'):
             gpio.output(self.red, 0)
+        elif(state == 0 or state == 'off'):
+            gpio.output(self.red, 1)
 
     def set_green(self, state='toggle'):
         if(state == 'toggle'):
             gpio.output(self.green, not gpio.input(self.green))
         elif(state == 1 or state == 'on'):
-            gpio.output(self.green, 1)
-        elif(state == 0 or state == 'off'):
             gpio.output(self.green, 0)
+        elif(state == 0 or state == 'off'):
+            gpio.output(self.green, 1)
 
     def set_yellow(self, state='toggle'):
         if(state == 'toggle'):
             gpio.output(self.yellow, not gpio.input(self.yellow))
         elif(state == 1 or state == 'on'):
-            gpio.output(self.yellow, 1)
-        elif(state == 0 or state == 'off'):
             gpio.output(self.yellow, 0)
+        elif(state == 0 or state == 'off'):
+            gpio.output(self.yellow, 1)
