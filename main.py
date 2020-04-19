@@ -36,24 +36,27 @@ lights = TrafficLights()
 @app.route('/red/<state>')
 def red(state):
 	print('red: ' + str(state))
+	return 'OK', 200
 
-@app.route('/red?')
+@app.route('/red')
 def red_get():
 	return lights.get_red()
 
 @app.route('/green/<state>')
 def green(state):
 	print('green: ' + str(state))
+	return 'OK', 200
 
-@app.route('/green?')
+@app.route('/green')
 def green_get():
 	return lights.get_green()
 
 @app.route('/yellow/<state>')
 def yellow(state):
 	print('yellow: ' + str(state))
+	return 'OK', 200
 
-@app.route('/yellow?')
+@app.route('/yellow')
 def yellow_get():
 	return lights.get_yellow()
 
