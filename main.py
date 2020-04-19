@@ -71,13 +71,13 @@ def home():
 			lights.off()
 
 		if 'red' in request.form:
-			lights.set_red(1)
+			lights.set_red()
 
 		if 'yellow' in request.form:
-			lights.set_yellow(1)
+			lights.set_yellow()
 
 		if 'green' in request.form:
-			lights.set_green(1)
+			lights.set_green()
 
 	redStatus = 'red' if lights.get_red() else 'black'
 	yellowStatus = 'yellow' if lights.get_yellow() else 'black'

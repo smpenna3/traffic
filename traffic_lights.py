@@ -43,7 +43,11 @@ class TrafficLights():
             gpio.output(self.red, 1)
 
     def get_red(self):
-        return gpio.input(self.red)
+        ''' Return the state of the light 
+
+        Important note! States are reversed such that 1 is off and 0 is on
+        '''
+        return not gpio.input(self.red)
 
 
     def set_green(self, state='toggle'):
@@ -55,7 +59,11 @@ class TrafficLights():
             gpio.output(self.green, 1)
 
     def get_green(self):
-        return gpio.input(self.green)
+        ''' Return the state of the light 
+
+        Important note! States are reversed such that 1 is off and 0 is on
+        '''
+        return not gpio.input(self.green)
 
 
     def set_yellow(self, state='toggle'):
@@ -67,4 +75,8 @@ class TrafficLights():
             gpio.output(self.yellow, 1)
 
     def get_yellow(self):
-        return gpio.input(self.yellow)
+        ''' Return the state of the light 
+
+        Important note! States are reversed such that 1 is off and 0 is on
+        '''
+        return not gpio.input(self.yellow)
