@@ -12,9 +12,13 @@ class TrafficLights():
         self.green = green
         self.yellow = yellow
         
+        self.configure_gpio()
+
         if(startoff):
             self.off()
 
+    def configure_gpio(self):
+        gpio.setup([self.red, self.green, self.yellow], gpio.OUT)
 
     # Turn all off
     def off(self):
