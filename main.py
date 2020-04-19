@@ -32,7 +32,31 @@ app = Flask(__name__)
 lights = TrafficLights()
 
 
-############# SETUP FLASK ######################
+############# SETUP FLASK ROUTES ######################
+@app.route('/red/<state>')
+def red(state):
+	print('red: ' + str(state))
+
+@app.route('/red?')
+def red_get():
+	return lights.get_red()
+
+@app.route('/green/<state>')
+def green(state):
+	print('green: ' + str(state))
+
+@app.route('/green?')
+def green_get():
+	return lights.get_green()
+
+@app.route('/yellow/<state>')
+def yellow(state):
+	print('yellow: ' + str(state))
+
+@app.route('/yellow?')
+def yellow_get():
+	return lights.get_yellow()
+
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
