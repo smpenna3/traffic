@@ -78,7 +78,9 @@ def home():
 		if 'green' in request.form:
 			lights.set_green(1)
 
-	redStatus, yellowStatus, greenStatus = ('red', 'yellow', 'green')
+	redStatus = 'red' if lights.get_red() else 'black'
+	yellowStatus = 'yellow' if lights.get_yellow() else 'black'
+	greenStatus = 'green' if lights.get_green() else 'black'
 	
 	return render_template('index.html', red_status=redStatus, yellow_status=yellowStatus, green_status=greenStatus)
 
