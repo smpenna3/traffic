@@ -8,18 +8,6 @@ import json
 
 from traffic_lights import TrafficLights
 
-
-########### PARAMETERS ###################
-# Pins for relays
-red = 16
-yellow = 17
-green = 18
-
-debugSet = True
-external = False
-##########################################
-##########################################
-
 # Setup logging
 logger = logging.getLogger('mainLog')
 logger.setLevel(logging.DEBUG)
@@ -154,7 +142,4 @@ def configuration():
 
 
 if __name__ == '__main__':
-	if(external):
-		app.run(threaded=True, debug=debugSet, host='0.0.0.0')
-	else:
-		app.run(threaded=True, debug=debugSet)
+	app.run(threaded=True, debug=True, host='0.0.0.0')
